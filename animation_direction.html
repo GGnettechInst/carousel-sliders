@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @keyframes directionAnimation{
+            from{
+                background-color: gold;
+                left: 0px;
+            }
+            to{
+                background-color: red;
+                left: 200px;
+            }
+        }
+        div{
+            animation-name: directionAnimation;
+            animation-duration: 2s;
+            animation-iteration-count: 1;
+            animation-direction: reverse;
+            position: relative;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title><link rel="stylesheet" href="auto_slide.scss">
+</head>
+<body>
+    div class="untitled">
+  <div class="untitled__slides">
+    <div class="untitled__slide">
+      <div class="untitled__slideBg"></div>
+      <div class="untitled__slideContent">
+        <span>London</span> 
+        <span>Scout</span>
+        <a class="button" href="#" target="/black">Unsplash Profile</a>
+      </div>
+    </div>
+    <div class="untitled__slide">
+      <div class="untitled__slideBg"></div>
+      <div class="untitled__slideContent">
+        
+        <span>Vladimir</span> 
+        <span>Kudinov</span>
+        <a class="button" href="#" target="/black">Unsplash Profile</a>
+      </div>
+    </div>
+    <div class="untitled__slide">
+      <div class="untitled__slideBg"></div>
+      <div class="untitled__slideContent">
+        <span>Macio</span> 
+        <span>Amorim</span>
+        <a class="button" href="#" target="/black">Unsplash Profile</a>
+      </div>
+    </div>
+    <div class="untitled__slide">
+      <div class="untitled__slideBg"></div>
+      <div class="untitled__slideContent">
+        <span>Mario</span> 
+        <span>Calvo</span>
+        <a class="button" href="#" target="/black">Unsplash Profile</a>
+      </div>
+    </div>
+  </div>
+  <div class="untitled__shutters"></div>
+</div>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <!-- codingflicks.com -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto image slideshow using HTML CSS</title>
+    <style>
+        *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+	background-color: #17374c;
+}
+.slider-area {
+    position: absolute;
+	transform: translate(-50%,-50%);
+	top: 50%;
+	left: 50%;
+	width: 90vmin;	
+	border-radius: 10px;
+	border: 30px ridge #ddd;
+    overflow: hidden;
+}
+.img-area{
+    width: 100%;
+    display: flex;
+    animation: animate 15s linear infinite;
+}
+.img-area img{
+    max-width: 100%;
+}
+@keyframes animate{
+    0%{
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateX(0);
+    }
+    30%{
+        transform: translateX(-100%);
+    }
+    50%{
+        transform: translateX(-100%);
+    }
+    55%{
+        transform: translateX(-200%);
+    }
+    75%{
+        transform: translateX(-200%);
+    }
+    80%{
+        transform: translateX(-300%);
+    }
+    100%{
+        transform: translateX(-300%);
+    }
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="slider-area">
+        <div class="img-area">
+            <img src="images/feed-image-1.png">
+            <img src="images/feed-image-3.png">
+            <img src="images/feed-image-5.png">
+            <img src="images/post-image-1.png">
+        </div>
+    </div>
+</body>
+</html>

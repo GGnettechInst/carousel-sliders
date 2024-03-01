@@ -1,0 +1,273 @@
+*{
+    margin: auto;
+    padding: 0;
+    font-family: Poppins, sans-serif;
+    box-sizing: border-box;
+}
+:root{
+    --body-color: #efefef;
+    --nav-color: #1876f2;
+    --bg-color: #fff;
+}
+
+body{
+    background-color: #f0f2f5;
+    color: #5f5f5f;
+}
+
+/* Navigation bar section */
+.navbar{
+    display: flex;
+    height: 100px;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--body-color);
+    opacity: 0.8;
+    padding: 10px 6%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: -100px;
+}
+.logo {
+    width: 80px;
+    margin-right: 45px;
+}
+
+.navbar-center ul li{
+    display: inline-block;
+    list-style: none;
+}
+.navbar-center ul li a{
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    margin: 5px 8px;
+    padding-right: 5px;
+    position: relative;
+    text-decoration: none;
+}
+.navbar-center ul li span{
+    color: var(--nav-color);
+}
+.navbar-center ul li a img{
+    width: 30px;
+}
+
+.navbar-center ul li a::after{
+    content: '';
+    width: 0;
+    height: 2px;
+    background: #045be6;
+    position: absolute;
+    bottom: -15px;
+    transition: background-color, width 0.3s;
+}
+
+.navbar-center ul li a:hover{
+    background-color: #e2e4e7;
+}
+
+.navbar-center ul li a:hover::after,
+.navbar-center ul li a.active-link::after
+{
+    width: 100%;
+}
+
+.navbar-center ul li a img::after{
+    content: '';
+    width: 100%;
+    height: 2px;
+}
+
+/* cover section */
+
+.cover-section{
+    position: relative;
+    background-color: blue;
+    display: block;
+}
+
+.slideshow-container{
+    background-color: red;
+    position: relative;
+}
+.cover-image{
+    width: 100%;
+    margin: auto;
+    transition-duration: all .3s ease-in-out;
+    animation-name: myAnimation;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes myAnimation{
+    from{
+        max-width: 95%;
+        
+    }
+    to{
+        max-width: 100%;
+       
+    }
+}
+
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 10px 0px;
+    width: 100%;
+    position: absolute;
+    bottom: 200px;
+    left: 50px;
+    display: block;
+}
+.text h1{
+    font-size: 40px;
+    position: absolute;
+    color: #fff;
+    /* left: 50px; */
+}
+/* .heading{
+    animation-name: headingAnimation;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-direction: reverse;
+    position: relative;
+} */
+@keyframes headingAnimation{
+    from{
+        left: 0; 
+    }
+
+    to{
+        left: 50px;
+    }
+}
+.text button{
+    padding: 8px 3px;
+    font-size: 18px;
+    width: 200px;
+    background: var(--nav-color);
+    margin-top: 20px;
+    color: var(--bg-color);
+    display: inline-block;
+    border-radius: 50px;
+    border: 0.5px solid var(--nav-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background opacity 0.1s;
+    /* display: none; */
+}
+.text button:hover{
+    background: transparent;
+    border: 1px solid var(--nav-color);
+    transition: background 0.3s;
+}
+.text button div{
+    padding-left: 15px;
+}
+.text button span{
+    padding: 5px 8px;
+    right: 0;
+    border-radius: 50%;
+    background: var(--nav-color);
+    color: var(--bg-color);
+}
+.text button span:hover{
+    background: var(--bg-color);
+    cursor: pointer;
+    border: 0.1px solid var(--bg-color);
+    opacity: 0.6;
+    transition: opacity 0.3s;
+}
+.text button svg{
+    width: 20px;
+    fill: var(--bg-color);
+    stroke: var(--bg-color);
+}
+.text button svg:hover{
+    fill: var(--nav-color);
+    stroke: navy;
+    /* transition: background 0.5s; */
+}
+
+.btn{
+    animation-name: btnAnimation;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-direction: reverse;
+    position: relative;
+}
+@keyframes btnAnimation{
+    from{
+        top: 0;
+    }
+
+    to{
+        top: 50px;
+    }
+}
+  
+/* The dots/bullets/indicators */
+.dot-container{
+    display: inline;
+    padding-left: 20px;
+    position: absolute;
+    bottom: 5px;
+}
+
+.dot {
+height: 15px;
+width: 15px;
+margin: 0 2px;
+background-color: rgba(107, 81, 81, 0.604);
+color: red;
+border-radius: 50%;
+display: inline-block;
+transition: background-color 0.6s ease;
+z-index: 1;
+text-align: center;
+}
+
+.active {
+background-color: blue;
+}
+
+/* Fading animation */
+/* .fade {
+animation-name: fade;
+animation-duration: 1.5s;
+}
+
+@keyframes fade {
+from {opacity: .4} 
+to {opacity: 1}
+} */
+
+/* On smaller screens, decrease text size */
+/* @media only screen and (max-width: 300px) {
+.text {font-size: 11px}
+} */
+
+/* Body Section */
+.bd-sec{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 20px;
+}
+.course-view{
+    background-color: #045be6;
+    height: 300px;
+    width: 300px;
+}
+.image-view{
+    background-color: #045be6;
+    color: var(--bg-color);
+}
+.image-view img{
+    width: 100%;
+}
